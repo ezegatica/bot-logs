@@ -1,0 +1,13 @@
+# General prettier ignore
+./node_modules
+.next
+.turbo
+skyframe
+dist
+lib
+bin
+.yarn
+.husky
+*.md
+*.json
+*.yml
