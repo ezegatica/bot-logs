@@ -1,9 +1,12 @@
-import LogTable from '../../components/LogTable';
+import TableWrapper from '../../components/TableWrapper';
 import { LogsRequest } from '../types';
 
 export default async function page() {
   const logs: LogsRequest = await fetch(
-    `${process.env.API_URL}/output?page=1`
+    `${process.env.API_URL}/output?page=1`,
+    {
+      cache: 'no-store'
+    }
   ).then(res => res.json());
 
   return (
@@ -19,13 +22,7 @@ export default async function page() {
           </p>
         </div>
       </div>
-      <div className="mt-8 flow-root">
-        <div className="-my-2 -mx-4 sm:-mx-6 lg:-mx-8">
-          <div className="inline-block min-w-full py-2 align-middle">
-            <LogTable logs={logs} />
-          </div>
-        </div>
-      </div>
+      <TableWrapper logs={logs} />
     </div>
   );
 }

@@ -39,10 +39,10 @@ export default function Navbar() {
                   <Image
                     className="block h-8 w-auto rounded-full"
                     src="/bot.png"
-                    quality={50}
+                    quality={25}
                     width={32}
                     height={32}
-                    alt="Your Company"
+                    alt="Gati Bot"
                   />
                 </div>
 

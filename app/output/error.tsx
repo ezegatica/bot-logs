@@ -1,7 +1,10 @@
 'use client';
 
-function OutputErrorPage({error}: {error: {message: string}}) {
-  return <p>{error.message}</p>
+import Link from 'next/link';
+import ErrorPage from "@components/Error";
+
+function OutputErrorPage({ error }: { error: { message: string } }) {
+  return <ErrorPage error={error} />;
 }
 
 export default OutputErrorPage;
